@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBN'S Local Food — Order this week's plate</title>
+<meta name="description" content="BBN'S Local Food in Afienya cooks a different Ghanaian dish every weekday. Order ahead for pickup or delivery.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap header-row">
+    <div class="brand">
+      <img src="assets/logo.jpg" alt="BBN'S Local Food logo">
+      <div class="brand-name">BBN'S<span>LOCAL FOOD</span></div>
+    </div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#find-us">Find us</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline" href="https://wa.me/233240736581" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-primary" href="#order">Order now</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<section class="hero textured">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-badge">Afienya · off Dodowa Road</div>
+      <h1>One home cooked plate, every weekday.</h1>
+      <p class="lead">BBN'S Local Food cooks a different Ghanaian favourite each day rice and stew on Monday, banku and okro on Tuesday, jollof, tuo zaafi, and fried rice through the week. Order ahead and we'll have your plate ready.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-gold">See this week's plates</a>
+        <a href="#order" class="btn btn-outline">Order a plate</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>Makes you feel good</b><span>Fresh dishes a week</span></div>
+        <div><b>Mon-Fri</b><span>Order &amp; pickup days</span></div>
+        <div><b>BBN'S LOCAL FOOD</b><span>Cooked to order</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/food.jpg" alt="Trays of freshly prepared BBN'S Local Food dishes laid out for service">
+      <div class="tag">Today's trays, straight from the kitchen</div>
+    </div>
+  </div>
+</section>
+
+<section class="section menu-section textured" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="band-title">This week's line-up</span>
+      <h2>Pick a day, see what's cooking</h2>
+      <p>Every plate is made fresh on the day. Tap a day below to read about it, then send in your order.</p>
+    </div>
+
+    <div class="day-tabs" id="dayTabs" role="tablist" aria-label="Day of the week">
+      <button class="day-tab active" data-day="monday" role="tab" aria-selected="true">Monday</button>
+      <button class="day-tab" data-day="tuesday" role="tab" aria-selected="false">Tuesday</button>
+      <button class="day-tab" data-day="wednesday" role="tab" aria-selected="false">Wednesday</button>
+      <button class="day-tab" data-day="thursday" role="tab" aria-selected="false">Thursday</button>
+      <button class="day-tab" data-day="friday" role="tab" aria-selected="false">Friday</button>
+    </div>
+
+    <div class="menu-card" id="menuCard">
+      <div class="menu-card-info">
+        <div class="day-label" id="menuDayLabel">Monday</div>
+        <h3 id="menuDishName">Rice &amp; stew, with fish, chicken or meat</h3>
+        <p id="menuDishDesc">Our stew simmers all morning. Tell us your protein and we'll plate it hot for pickup or delivery.</p>
+        <a href="#order" class="btn btn-primary order-this" id="orderThisBtn">Order Monday's plate</a>
+      </div>
+      <div class="menu-card-visual">
+        <div class="stars"></div>
+        <p class="quote" id="menuQuote">"Rice and stew like it's cooked at home."<small>A regular customer</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section order-section" id="order">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <span class="band-title">Place your order</span>
+        <h2>Tell us what you'd like</h2>
+        <p>Fill this in and your order goes straight to our kitchen inbox. We'll confirm your pickup or delivery time by phone or WhatsApp.</p>
+      </div>
+
+      <form id="orderForm">
+        <div class="order-form">
+        <div class="field">
+          <label>Which day are you ordering for?</label>
+          <div class="radio-group" id="dayRadioGroup">
+            <div class="radio-chip">
+              <input type="radio" name="orderDay" id="day-monday" value="Monday — Rice &amp; stew with fish, chicken or meat" checked>
+              <label for="day-monday">Monday</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="orderDay" id="day-tuesday" value="Tuesday — Banku with okro stew">
+              <label for="day-tuesday">Tuesday</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="orderDay" id="day-wednesday" value="Wednesday — Jollof rice with chicken">
+              <label for="day-wednesday">Wednesday</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="orderDay" id="day-thursday" value="Thursday — Tuo zaafi">
+              <label for="day-thursday">Thursday</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="orderDay" id="day-friday" value="Friday — Fried rice with chicken">
+              <label for="day-friday">Friday</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" id="proteinField">
+          <label for="protein">Protein / any preference</label>
+          <input type="text" id="protein" name="protein" placeholder="e.g. chicken, fish, extra spicy, oil-free">
+        </div>
+
+        <div class="field">
+          <label>How many plates?</label>
+          <div class="qty-control">
+            <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span id="qtyValue">1</span>
+            <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            <input type="hidden" name="quantity" id="qtyInput" value="1">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Pickup or delivery?</label>
+          <div class="radio-group">
+            <div class="radio-chip">
+              <input type="radio" name="fulfilment" id="fulfil-pickup" value="Pickup at Afienya" checked>
+              <label for="fulfil-pickup">Pickup</label>
+            </div>
+            <div class="radio-chip">
+              <input type="radio" name="fulfilment" id="fulfil-delivery" value="Delivery">
+              <label for="fulfil-delivery">Delivery</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field" id="addressField">
+          <label for="address">Delivery address</label>
+          <textarea id="address" name="address" placeholder="Landmark, area and any directions our rider will need"></textarea>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fullName">Your name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Full name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 024 073 6581" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" placeholder="Preferred pickup time, allergies, extra stew — optional"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Send order to the kitchen</button>
+        <p class="form-note">Your order is emailed straight to BBN'S Local Food. For same-day orders, following up on WhatsApp at <a href="https://wa.me/233240736581" target="_blank" rel="noopener">024 073 6581</a> gets you the fastest confirmation.</p>
+        <div class="form-status" id="formStatus"></div>
+        </div>
+      </form>
+    </div>
+
+    <aside class="ticket" aria-live="polite">
+      <h3>Your order slip</h3>
+      <p class="ticket-sub">Updates as you fill in the form</p>
+      <hr class="ticket-divider">
+      <div id="ticketBody">
+        <p class="ticket-empty">Choose a day to start your order.</p>
+      </div>
+      <hr class="ticket-divider">
+      <div class="ticket-footer">BBN'S Local Food · Afienya, off Dodowa Road</div>
+    </aside>
+  </div>
+</section>
+
+<section class="section contact-section textured" id="find-us">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <span class="band-title">Find us</span>
+        <h2>Come by, call, or send a message</h2>
+        <p>We're just off Dodowa Road in Afienya. Reach out any weekday to place or check on an order.</p>
+      </div>
+      <ul class="contact-list">
+        <li><span class="icon"></span><a href="tel:+233240736581">0240 736 581</a></li>
+        <li><span class="icon"></span><a href="mailto:nkrumahvida61@gmail.com">nkrumahvida61@gmail.com</a></li>
+        <li><span class="icon"></span>Afienya — off Dodowa Road</li>
+      </ul>
+    </div>
+    <div class="map-embed">
+      <iframe title="Map to BBN'S Local Food, Afienya, off Dodowa Road" src="https://www.google.com/maps?q=Afienya+off+Dodowa+Road+Ghana&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="">
+      BBN'S Local Food
+    </div>
+    <div class="fine">Afienya, off Dodowa Road · 0240 736 581 · nkrumahvida61@gmail.com</div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
