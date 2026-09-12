@@ -4,36 +4,31 @@
       label: "Monday",
       dish: "Rice &amp; stew, with fish, chicken or meat",
       desc: "Our stew simmers all morning. Tell us your protein and we'll plate it hot for pickup or delivery.",
-      quote: "\"Rice and stew like it's cooked at home.\"",
-      img: "assets/Monday.jpg"
+      quote: "\"Rice and stew like it's cooked at home.\""
     },
     tuesday: {
       label: "Tuesday",
       dish: "Banku with okro stew",
       desc: "Made oiled or oil-free, whichever you prefer — just mention it when you order.",
-      quote: "\"The oil-free okro is my Tuesday ritual.\"",
-      img: "assets/Tuesday.jpg"
+      quote: "\"The oil-free okro is my Tuesday ritual.\""
     },
     wednesday: {
       label: "Wednesday",
       dish: "Jollof rice with chicken",
       desc: "Smoky, well-spiced jollof with a well-seasoned chicken piece on the side.",
-      quote: "\"Best jollof for miles around Afienya.\"",
-      img: "assets/Wednesday.jpg"
+      quote: "\"Best jollof for miles around Afienya.\""
     },
     thursday: {
       label: "Thursday",
       dish: "Tuo zaafi",
       desc: "Soft tuo zaafi served with your choice of soup — ask us what's on for the day.",
-      quote: "\"Reminds me exactly of home.\"",
-      img: "assets/Thursday.jpg"
+      quote: "\"Reminds me exactly of home.\""
     },
     friday: {
       label: "Friday",
       dish: "Fried rice with chicken",
       desc: "A well-loved way to close the week — seasoned fried rice with grilled chicken.",
-      quote: "\"My Friday treat, every time.\"",
-      img: "assets/Friday.jpg"
+      quote: "\"My Friday treat, every time.\""
     }
   };
 
@@ -43,7 +38,6 @@
   var dishDesc = document.getElementById('menuDishDesc');
   var quoteEl = document.getElementById('menuQuote');
   var orderThisBtn = document.getElementById('orderThisBtn');
-  var visual = document.querySelector('.menu-card-visual');
 
   function setDay(key){
     var d = DAYS[key];
@@ -53,9 +47,6 @@
     dishDesc.textContent = d.desc;
     quoteEl.innerHTML = d.quote + "<small>— A regular customer</small>";
     orderThisBtn.textContent = "Order " + d.label + "'s plate";
-    if(visual && d.img){
-      visual.style.backgroundImage = "url('" + d.img + "')";
-    }
     tabs.forEach(function(t){
       var active = t.getAttribute('data-day') === key;
       t.classList.toggle('active', active);

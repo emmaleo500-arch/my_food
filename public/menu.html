@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBN'S Local Food — This week's menu</title>
+<meta name="description" content="See what BBN'S Local Food is cooking each weekday in Afienya. Rice and stew, banku and okro, jollof, tuo zaafi and fried rice.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap header-row">
+    <div class="brand">
+      <img src="assets/logo.jpg" alt="BBN'S Local Food logo">
+      <div class="brand-name">BBN'S<span>LOCAL FOOD</span></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="find-us.html">Find us</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline" href="https://wa.me/233240736581" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-primary" href="order.html">Order now</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero textured">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow-badge">This week's line-up</div>
+        <h1>Pick a day, see what's cooking.</h1>
+        <p class="lead">Every plate is made fresh on the day, cooked in our kitchen in Afienya just off Dodowa Road. Tap a day to read about it, then send in your order.</p>
+        <div class="hero-actions">
+          <a href="#day-tabs" class="btn btn-gold">Choose a day</a>
+          <a href="order.html" class="btn btn-outline">Order a plate</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/food.jpg" alt="Trays of freshly prepared BBN'S Local Food dishes laid out for service">
+        <div class="tag">Today's trays, straight from the kitchen</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-section textured" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="band-title">Weekly menu</span>
+        <h2>One home cooked plate, every weekday.</h2>
+        <p>Monday to Friday we cook a different Ghanaian favourite. Order ahead and we'll have your plate ready for pickup or delivery.</p>
+      </div>
+
+      <div class="day-tabs" id="dayTabs" role="tablist" aria-label="Day of the week">
+        <button class="day-tab active" data-day="monday" role="tab" aria-selected="true">Monday</button>
+        <button class="day-tab" data-day="tuesday" role="tab" aria-selected="false">Tuesday</button>
+        <button class="day-tab" data-day="wednesday" role="tab" aria-selected="false">Wednesday</button>
+        <button class="day-tab" data-day="thursday" role="tab" aria-selected="false">Thursday</button>
+        <button class="day-tab" data-day="friday" role="tab" aria-selected="false">Friday</button>
+      </div>
+
+      <div class="menu-card" id="menuCard">
+        <div class="menu-card-info">
+          <div class="day-label" id="menuDayLabel">Monday</div>
+          <h3 id="menuDishName">Rice &amp; stew, with fish, chicken or meat</h3>
+          <p id="menuDishDesc">Our stew simmers all morning. Tell us your protein and we'll plate it hot for pickup or delivery.</p>
+          <a href="order.html" class="btn btn-primary order-this" id="orderThisBtn">Order Monday's plate</a>
+        </div>
+        <div class="menu-card-visual">
+          <div class="stars"></div>
+          <p class="quote" id="menuQuote">"Rice and stew like it's cooked at home."<small>— A regular customer</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="all-dishes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="band-title">The full week</span>
+        <h2>What's on each day</h2>
+        <p>Scroll down for a quick look at every plate we cook through the week.</p>
+      </div>
+
+      <div class="dish-list">
+        <div class="dish-card">
+          <div class="dish-day">Monday</div>
+          <div class="dish-body">
+            <h3>Rice &amp; stew, with fish, chicken or meat</h3>
+            <p>Our stew simmers all morning. Tell us your protein and we'll plate it hot for pickup or delivery.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-day">Tuesday</div>
+          <div class="dish-body">
+            <h3>Banku with okro stew</h3>
+            <p>Made oiled or oil-free, whichever you prefer — just mention it when you order.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-day">Wednesday</div>
+          <div class="dish-body">
+            <h3>Jollof rice with chicken</h3>
+            <p>Smoky, well-spiced jollof with a well-seasoned chicken piece on the side.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-day">Thursday</div>
+          <div class="dish-body">
+            <h3>Tuo zaafi</h3>
+            <p>Soft tuo zaafi served with your choice of soup — ask us what's on for the day.</p>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-day">Friday</div>
+          <div class="dish-body">
+            <h3>Fried rice with chicken</h3>
+            <p>A well-loved way to close the week — seasoned fried rice with grilled chicken.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="">
+      BBN'S Local Food
+    </div>
+    <div class="fine">Afienya, off Dodowa Road · 0240 736 581 · nkrumahvida61@gmail.com</div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
