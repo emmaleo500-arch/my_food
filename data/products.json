@@ -1,0 +1,102 @@
+[
+  {
+    "id": "p_001",
+    "name": "Fried Plantain",
+    "category": "Chop",
+    "price": 15,
+    "unit": "piece",
+    "desc": "Sweet ripe plantain fried to golden perfection — a perfect sweet side.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_002",
+    "name": "Kelewele",
+    "category": "Chop",
+    "price": 15,
+    "unit": "portion",
+    "desc": "Spicy, peppery fried plantain cubes — our most-loved evening snack.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_003",
+    "name": "Boiled Yam with Pepper",
+    "category": "Chop",
+    "price": 12,
+    "unit": "plate",
+    "desc": "Steamed yam served with fresh pepper — light, healthy, and filling.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_004",
+    "name": "Gari with Groundnut",
+    "category": "Chop",
+    "price": 8,
+    "unit": "cup",
+    "desc": "Crispy gari tossed with roasted groundnuts and a touch of spice.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_005",
+    "name": "Grilled Chicken Thighs",
+    "category": "Dress",
+    "price": 25,
+    "unit": "piece",
+    "desc": "Marinated chicken thighs grilled over charcoal — juicy and smoky.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_006",
+    "name": "Fried Fish (Tilapia)",
+    "category": "Dress",
+    "price": 30,
+    "unit": "piece",
+    "desc": "Whole tilapia fried to a crispy golden crust with fiery pepper sauce on the side.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_007",
+    "name": "Stewed Fish",
+    "category": "Dress",
+    "price": 28,
+    "unit": "plate",
+    "desc": "Fish slow-cooked in a rich, thick tomato and pepper stew — pure comfort.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_008",
+    "name": "Chicken Sausage",
+    "category": "Dress",
+    "price": 20,
+    "unit": "piece",
+    "desc": "Spiced chicken sausage, grilled or fried — great with bread or gari.",
+    "image": "assets/food.jpg",
+    "available": true
+  },
+  {
+    "id": "p_1790293573894",
+    "name": "RIce and Beans",
+    "category": "Chop",
+    "price": 25,
+    "unit": "piece",
+    "desc": "sell with fresh oil",
+    "image": "/uploads/1790293573885-912516.jpg",
+    "available": true
+  },
+  {
+    "id": "p_1790294775645",
+    "name": "Lom",
+    "category": "Chop",
+    "price": 30,
+    "unit": "plate",
+    "desc": "eat with joy",
+    "image": "/uploads/1790294775637-864811.jpg",
+    "available": true
+  }
+]

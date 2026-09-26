@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBN'S Local Food — Shop (Chop &amp; Dress)</title>
+<meta name="description" content="Order BBN'S Local Food chop and dress items — fried plantain, kelewele, gari, grilled chicken, fish, and sausages. Pickup in Afienya or delivery.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap header-row">
+    <div class="brand">
+      <img src="assets/logo.jpg" alt="BBN'S Local Food logo">
+      <div class="brand-name">BBN'S<span>LOCAL FOOD</span></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="shope.html" class="active">Shop</a>
+      <a href="order.html">Order</a>
+      <a href="find-us.html">Find us</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline" href="https://wa.me/233240736581" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-primary" href="#cart">Your order slip</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<section class="hero textured">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow-badge">Chop &amp; Dress</div>
+      <h1>Grab some chop, take some dress home.</h1>
+      <p class="lead">No day-of restrictions — order any of our chop (plantain, kelewele, gari) and dress (grilled chicken, fish, sausages) items and we'll have them ready for pickup or delivery from our kitchen in Afienya.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-gold">See the full shop</a>
+        <a href="#cart" class="btn btn-outline">Your order slip</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>Any day</b><span>Pick up or get it delivered</span></div>
+        <div><b>Fresh fry</b><span>Cooked to order</span></div>
+        <div><b>BBN'S LOCAL FOOD</b><span>Afienya, off Dodowa Road</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/food.jpg" alt="Trays of freshly prepared BBN'S Local Food dishes laid out for service">
+      <div class="tag">Chop, dress, and everything in between</div>
+    </div>
+  </div>
+</section>
+
+<section class="section shop-section" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="band-title">The shop</span>
+      <h2>Chop &amp; dress, any day you like</h2>
+      <p>Browse our chop (snacks and sides) and dress (grilled and sauced proteins). Add what you want to your order slip, then checkout — your order goes straight to our kitchen inbox.</p>
+    </div>
+
+    <div class="category-bar" role="tablist" aria-label="Product category">
+      <button class="cat-tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="cat-tab" data-cat="Chop" role="tab" aria-selected="false">Chop</button>
+      <button class="cat-tab" data-cat="Dress" role="tab" aria-selected="false">Dress</button>
+    </div>
+
+    <div class="product-grid" id="productGrid" aria-live="polite">
+      <p class="ticket-empty">Loading the shop…</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cart">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <span class="band-title">Your order slip</span>
+        <h2>Review &amp; checkout</h2>
+        <p>Your cart updates live as you shop. Fill in the form below and your order is emailed straight to the kitchen.</p>
+      </div>
+
+      <div class="order-form">
+        <div id="cartList">
+          <p class="cart-empty">Your order slip is empty. Add some chop or dress from the shop above.</p>
+        </div>
+        <div class="cart-total-row">
+          <span>Total</span>
+          <b id="cartTotal">₵0.00</b>
+        </div>
+
+        <form id="checkoutForm" style="margin-top:28px;">
+          <input type="hidden" name="items" id="cartItemsInput">
+          <div class="field-row">
+            <div class="field">
+              <label for="fullName">Your name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Full name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 024 073 6581" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label>Pickup or delivery?</label>
+            <div class="radio-group">
+              <div class="radio-chip">
+                <input type="radio" name="fulfilment" id="fulfil-pickup" value="Pickup at Afienya" checked>
+                <label for="fulfil-pickup">Pickup</label>
+              </div>
+              <div class="radio-chip">
+                <input type="radio" name="fulfilment" id="fulfil-delivery" value="Delivery">
+                <label for="fulfil-delivery">Delivery</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field" id="addressField">
+            <label for="address">Delivery address</label>
+            <textarea id="address" name="address" placeholder="Landmark, area and any directions our rider will need"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes" placeholder="Preferred pickup time, allergies, extra pepper  optional"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="checkoutBtn" disabled>Send order to the kitchen</button>
+          <p class="form-note">Your order is emailed straight to BBN'S Local Food. For same day orders, following up on <a href="https://wa.me/233240736581" target="_blank" rel="noopener">WhatsApp at 024 073 6581</a> gets you the fastest confirmation.</p>
+          <div class="form-status" id="checkoutStatus"></div>
+        </form>
+      </div>
+    </div>
+
+    <aside class="ticket" aria-live="polite" id="cartTicket">
+      <h3>Order slip</h3>
+      <p class="ticket-sub">Your cart updates live</p>
+      <hr class="ticket-divider">
+      <div id="ticketBody">
+        <p class="ticket-empty">Add items from the shop.</p>
+      </div>
+      <hr class="ticket-divider">
+      <div class="ticket-row" style="margin-top:10px;">
+        <span style="font-weight:700;">Total</span>
+        <b id="ticketTotal">₵0.00</b>
+      </div>
+      <div class="ticket-footer">BBN'S Local Food : Afienya, off Dodowa Road</div>
+    </aside>
+  </div>
+</section>
+
+<section class="section shop-admin-section textured" id="admin">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="band-title">Owner area</span>
+      <h2>Add a new product to the shop</h2>
+      <p>Only the owner should use this. Log in with the shop password to upload new chop or dress items. Any new product appears in the shop above for buyers.</p>
+    </div>
+
+    <div class="admin-gate" id="adminGate">
+      <div class="admin-locked" id="adminLocked">
+        <input type="password" id="adminPassword" placeholder="Shop admin password" autocomplete="off">
+        <button class="btn btn-primary" id="adminLoginBtn" type="button">Access admin</button>
+      </div>
+      <p class="admin-msg" id="adminMsg"></p>
+    </div>
+
+    <div id="adminFormWrap" style="display:none;">
+      <form id="adminForm">
+        <div class="field">
+          <label for="productName">Product name</label>
+          <input type="text" id="productName" name="name" placeholder="e.g. Kelewele" required>
+        </div>
+
+        <div class="field">
+          <label for="productCategory">Category</label>
+          <select id="productCategory" name="category" required>
+            <option value="">— Pick a category —</option>
+            <option value="Chop">Chop</option>
+            <option value="Dress">Dress</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="productPrice">Price (₵)</label>
+            <input type="number" id="productPrice" name="price" min="0" step="0.1" placeholder="e.g. 15" required>
+          </div>
+          <div class="field">
+            <label for="productUnit">Unit</label>
+            <select id="productUnit" name="unit">
+              <option value="piece">piece</option>
+              <option value="portion">portion</option>
+              <option value="plate">plate</option>
+              <option value="cup">cup</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="productDesc">Description (short)</label>
+          <textarea id="productDesc" name="desc" placeholder="A line that sells it — e.g. Spicy, peppery fried plantain cubes."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="productImage">Product photo</label>
+          <input type="file" id="productImage" name="image" accept="image/*" required>
+          <img id="imagePreview" class="preview-img" src="" alt="" style="display:none;">
+          <p class="file-hint">JPG or PNG, max 2MB. This photo shows up on the shop for buyers.</p>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block" id="productSubmitBtn">Save product</button>
+        <div class="form-status" id="productStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="assets/logo.jpg" alt="">
+      BBN'S Local Food
+    </div>
+    <div class="fine">Afienya, off Dodowa Road · 0240 736 581 · nkrumahvida61@gmail.com</div>
+  </div>
+</footer>
+
+<script src="js/shop.js"></script>
+</body>
+</html>

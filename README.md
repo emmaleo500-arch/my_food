@@ -15,7 +15,7 @@ bbns-local-food/
 ├── server/
 │   └── server.js        ← the backend (Node + Express + Nodemailer)
 ├── package.json
-├── .env.example
+├── .env
 └── README.md
 ```
 

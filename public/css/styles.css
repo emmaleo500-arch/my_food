@@ -252,11 +252,115 @@ footer .fine{font-size:0.8rem;}
 
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
 
+/* ---------- Shop (chop & dress) ---------- */
+.shop-section .product-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;
+}
+.product-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:0 4px 16px -6px rgba(5,59,24,0.08);display:flex;flex-direction:column;
+}
+.product-img{
+  aspect-ratio:1/1;overflow:hidden;background:var(--cream);
+  display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);
+}
+.product-img img{width:100%;height:100%;object-fit:cover;}
+.product-body{padding:20px;display:flex;flex-direction:column;flex:1;}
+.product-body .cat-badge{
+  display:inline-block;background:var(--green-deep);color:var(--gold-light);
+  padding:3px 10px;border-radius:999px;font-size:0.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;align-self:flex-start;
+}
+.product-body h3{font-size:1.15rem;margin:4px 0 6px;}
+.product-body p{font-size:0.88rem;color:var(--ink-soft);margin:0 0 12px;flex:1;}
+.product-price{
+  display:block;font-family:'Baloo 2';font-size:1.3rem;color:var(--green-deep);margin-bottom:14px;
+}
+.product-price small{font-size:0.78rem;color:var(--ink-soft);font-family:'Work Sans';font-weight:400;}
+.product-qty{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.product-qty button{
+  width:30px;height:30px;border-radius:8px;border:1.5px solid var(--line);background:var(--cream);
+  font-size:1rem;font-weight:700;color:var(--green-deep);
+}
+.product-qty span{font-weight:700;font-size:1rem;min-width:20px;text-align:center;}
+.product-qty input{display:none;}
+.product-body .btn-add{
+  width:100%;padding:10px;font-weight:700;font-size:0.9rem;
+}
+.product-body .btn-add:not(.added){background:var(--gold);color:var(--green-deep);}
+.product-body .btn-add.not-added:hover{background:var(--gold-light);}
+.product-body .btn-add.added{background:var(--green);color:var(--cream);}
+.product-card.unavailable{opacity:0.55;}
+.product-card.unavailable .btn-add{cursor:not-allowed;opacity:0.6;}
+
+.category-bar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;
+}
+.cat-tab{
+  border:2px solid var(--line);background:var(--cream);color:var(--ink-soft);
+  padding:8px 18px;border-radius:999px;font-weight:700;font-size:0.9rem;cursor:pointer;
+  transition:border-color .15s ease,background .15s ease;
+}
+.cat-tab:hover{border-color:var(--green);color:var(--green-deep);}
+.cat-tab.active{border-color:var(--green);background:var(--green);color:var(--cream);}
+
+.cart-item{
+  display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:0.9rem;
+}
+.cart-item img{width:44px;height:44px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+.cart-item .cart-item-name{flex:1;font-weight:600;}
+.cart-item .cart-item-meta{color:var(--ink-soft);font-size:0.84rem;}
+.cart-item .cart-item-qty{
+  display:flex;align-items:center;gap:6px;width:86px;justify-content:center;
+}
+.cart-item .cart-item-qty button{width:26px;height:26px;font-size:0.9rem;border-radius:6px;}
+.cart-item .cart-item-remove{
+  background:none;border:none;color:#C74336;font-weight:700;cursor:pointer;font-size:1.05rem;
+}
+.cart-empty{color:var(--ink-soft);font-style:italic;text-align:center;padding:24px 0;}
+.cart-total-row{
+  display:flex;justify-content:space-between;font-family:'Baloo 2';font-size:1.3rem;color:var(--green-deep);
+  border-top:2px solid var(--green-deep);padding-top:14px;margin-top:14px;
+}
+.cart-total-row b{color:var(--cream);background:var(--green-deep);padding:4px 12px;border-radius:8px;}
+
+#cart .wrap{
+  display:grid;grid-template-columns: 1.05fr 0.85fr;gap:44px;align-items:start;
+}
+
+.shop-admin-section .wrap{max-width:880px;}
+.admin-gate{
+  background:var(--cream);border:1px dashed var(--line);border-radius:16px;
+  padding:28px;text-align:center;margin-bottom:24px;
+}
+.admin-gate .admin-locked{
+  display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;
+}
+.admin-gate input{padding:10px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:0.95rem;}
+.admin-msg{margin-top:12px;font-size:0.86rem;font-weight:600;}
+.admin-msg.ok{color:var(--green-deep);}
+.admin-msg.err{color:#8A2A20;}
+
+#adminForm{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;
+  padding:32px;box-shadow:0 24px 50px -30px rgba(5,59,24,0.25);
+}
+#adminForm .preview-img{
+  max-width:100px;max-height:100px;border-radius:10px;border:1px solid var(--line);
+  object-fit:cover;margin-top:8px;display:block;
+}
+#adminForm .file-hint{font-size:0.8rem;color:var(--ink-soft);margin-top:4px;}
+
+@media (max-width: 880px){
+  .shop-section .product-grid{grid-template-columns:1fr;}
+}
+
 @media (max-width: 880px){
   .hero .wrap{grid-template-columns:1fr;}
   .hero-visual{order:-1;aspect-ratio:16/9;}
   .menu-card{grid-template-columns:1fr;}
   .order-section .wrap{grid-template-columns:1fr;}
+  #cart .wrap{grid-template-columns:1fr;}
   .ticket{position:static;}
   .contact-section .wrap{grid-template-columns:1fr;}
   nav, .header-cta{display:none;}
