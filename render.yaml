@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: bbns-local-food
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: TO_EMAIL
+        sync: false
+      - key: SHOP_ADMIN_PASSWORD
+        sync: false
